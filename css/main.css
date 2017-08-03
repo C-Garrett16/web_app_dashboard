@@ -1,0 +1,38 @@
+/* Base Styles */
+
+* {
+  font-family: 'sans-serif', serif;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ID Selectors */
+
+#container {
+  background-color: lightgrey;
+}
+
+#profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Class Selectors */
+
+/* CSS3 Selectors */
+
+#header-container li:last-child {
+  display: none;
+}
+
+/* Media Queries */
