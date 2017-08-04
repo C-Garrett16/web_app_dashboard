@@ -18,19 +18,15 @@ ul {
 
 a {
   text-decoration: none;
+  color: #ecf0f1;
 }
 
 /* ID Selectors */
 
-#container {
-  position: relative;
-}
-
-#header-container {
-  background-color: #e74c3c;
-}
+#header-container { background-color: #e74c3c; }
 
 #header-container li {
+  align-self: center;
   margin-top: 15px;
 }
 
@@ -68,21 +64,66 @@ a {
 /* CSS3 Selectors */
 
 #header-container li:nth-child(2),
-#header-container li:last-child {
-  display: none;
-}
+#header-container li:last-child { display: none; }
 
 /* Media Queries */
 
 @media (min-width: 500px) {
 
-  #header-container {
-    flex-direction: row;
-  }
+  #header-container { flex-direction: row; }
+
+  #app-name { margin-left: 10px; }
 
   #header-container li:nth-child(2),
+  #header-container li:last-child { display: block; }
+
+  #bell {
+    height: 30px;
+    width: 30px;
+  }
+
+  #header-container li:nth-child(2) {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
   #header-container li:last-child {
-    display: block;
+    font-size: 1.05em;
+    padding: 15px 10px;
+  }
+
+  #header-container li:nth-child(3) {
+    padding-left: 15px;
+    border-left: 1px solid #ecf0f1;
+  }
+
+  #profile-pic { height: 50px; width: 50px; }
+
+}
+
+@media (min-width: 950px) {
+
+  #header-container {
+    height: 80px;
+  }
+
+  #nav-container ul {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 70px;
+    height: 100%;
+    padding-top: 10px;
+  }
+
+  #nav-container li {
+    margin: 20px 0;
+  }
+
+  #dashboard {
+    float: left;
+    margin-left: 80px;
   }
 
 }
